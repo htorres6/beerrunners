@@ -20,6 +20,11 @@ class Database{
 			return $this->conn;
    }
 
+
+
+
+   
+
 	public function query($sql){
 		$result= $this->conn->query($sql);			
 					
@@ -28,7 +33,13 @@ class Database{
 			}
 			return $result;					
 	}
-	
+
+
+
+
+
+
+	//Familiarize how to use escape_string when using a super global POST
 	public function escape_string($value){
 		return $this->conn->real_escape_string($value);
 	}
