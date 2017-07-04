@@ -50,6 +50,12 @@ class Database{
 
 
 
+    // public function auto_id() {
+    // 	return $this->conn->insert_id();
+    // }
+
+
+
 }//End of class
 
 //class is instantiated

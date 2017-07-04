@@ -21,7 +21,7 @@
 <body>
 
 <form action="product_insert_data.php" method="POST" enctype="multipart/form-data" name="item_form">
-	<table border="1" align="center">
+	<table border="0" align="center">
 		<tr>
 			<td>
 				<strong>Image</strong>
@@ -46,7 +46,7 @@
 			</td>
 
 			<td>
-				<select name="item" id="item_name">
+				<select name="name" id="item_name">
 					<option value="selected" selected>Select Item</option>
 					<option value="Stone">Stone</option>
 					<option value="Lagunitas">Lagunitas</option>
@@ -97,8 +97,8 @@
 				method: "POST",
 				data: {name: beer},
 				success: function(data){
-					
-					document.item_form.price.value= 
+					$('#price_box').html(data);
+					//document.item_form.price.value=data;
 				}
 			});
 		});

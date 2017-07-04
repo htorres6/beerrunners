@@ -1,20 +1,27 @@
 <?php 
 require_once"../classes/ini.php";
 
-$item= $db->escape_string($_POST['item']);
-
-$file= $_FILES['product_image'];
-$product_image= $file['name'];
+//PRODUCT OBJECT INSTANCIATED
+$product= new Product();
 
 
-$quantity= $db->escape_string($_POST['quantity']);
-$price= $db->escape_string($_POST['price']);
+//$file= $_FILES['product_image'];
+
+$product->name= $db->escape_string($_POST['name']);
+
+$product->quantity= $db->escape_string($_POST['quantity']);
+
+$product->price= $db->escape_string($_POST['price']);
 
 
-$sql="INSERT INTO beers(picture, name, quantity, price) VALUES('$product_image', '$item', '$quantity', '$price');";
 
-if ($db->query($sql)) {
-	$db->redirect('product_insert.php');
-}
+$product->create();
+
+$db->redirect('product_insert.php');
+
+
+
+
+
 
 ?>

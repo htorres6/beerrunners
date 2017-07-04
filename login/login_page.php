@@ -19,7 +19,7 @@
 
 <h1><center><b>Login</b></center></h1>
 
-<form action="../data/login_page_data.php" method="POST" >
+<form action="login_page_data.php" method="POST" >
   <div class="imgcontainer">
     <img src="../beerrunners_main/product_image/bender.jpg" alt="Avatar" class="avatar">
   </div>
