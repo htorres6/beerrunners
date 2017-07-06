@@ -10,9 +10,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>Sign Up</title>
 
-        <link rel="stylesheet" type="text/css" href="../css/singup.css">
+        <link rel="stylesheet" type="text/css" href="../css/signup.css">
 <body>
 
 <h1><center><b>Sign Up</b></center></h2>

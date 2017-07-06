@@ -21,9 +21,10 @@ require_once('classes/session.php');
       <script
         src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">  
+      </script>
 
-      <!--BOOTSTRAP-->
+    <!--BOOTSTRAP-->
       <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -32,7 +33,7 @@ require_once('classes/session.php');
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!--BOOTSTRAP-->
+    <!--BOOTSTRAP-->
 
 
 </head>
@@ -49,20 +50,17 @@ require_once('classes/session.php');
               <span style="color: #FFFFFF; font-weight: bold; font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
           </div>
 
-
           <?php  Session::display_message(); ?>
 
+          <!--BUTTONS COMMUNICATING LIKE ACTIONS-->
+          <a href="login/login_page.php" class="btn btn-primary">Login</a>
 
-
-          <a href="login/login_page.php" style="margin-left: 800px;" class="btn btn-primary">LOGIN</a>
-          
           <a href="logout/logout_page_data.php" class="btn btn-danger">Logout</a>
 
-
-          <a href="signup/signup_page.php" style="text-align: right;" class="btn btn-warning">SIGN-UP</a>
+          <a href="signup/signup_page.php" class="btn btn-warning">Signup</a>
 
           <span class="glyphicon glyphicon-queen" aria-hidden="true"></span>
-
+          <!--BUTTONS COMMUNICATING LIKE ACTIONS-->
           
           <script>
               function openNav() {

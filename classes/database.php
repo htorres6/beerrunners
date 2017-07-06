@@ -50,9 +50,9 @@ class Database{
 
 
 
-    // public function auto_id() {
-    // 	return $this->conn->insert_id();
-    // }
+    public function auto_id() {
+    	return mysqli_insert_id($this->conn);
+    }
 
 
 

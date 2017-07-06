@@ -18,14 +18,42 @@ class Object {
 		if (!$fp) {
 			die("IDGAF!!.." . $db->conn->error);
 		}
-		// return $db->auto_id();
+		return $db->auto_id();
 	}
+
+
+
+
+
+
+
+
+	// UPDATED
+	public function update($id){
+		global $db;
+		$prop= $this->class_properties();
+		$properties= array();
+
+		foreach ($prop as $key => $value) {
+			$properties[]="{$key}='{$value}'";
+		}
+
+	//LAST_NAME, ADDRESS, STATE, PHONE_NUMBER ARE DELETED
+		$sql="UPDATE ". static::$table ." SET ".implode(", ", $properties)." WHERE ".static::$where_clause."='$id'";
+
+		if (!$db->query($sql)) {
+			die("WTF ... " . $db->conn->error);
+		}
+	}
+ 
+
+
 
 
 	public function class_properties(){
 		$properties= array();
 
-//CREATING A foreach loop FOR AN ARRAY
+//CREATING A foreoop FOR AN ARRAY
 		foreach(static::$table_columns as $column) {
 			if (property_exists($this, $column)) {
 				$properties[$column]=$this->$column;

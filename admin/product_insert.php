@@ -7,7 +7,8 @@
 			<script
 			  src="https://code.jquery.com/jquery-3.2.1.js"
 			  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-			  crossorigin="anonymous"></script>
+			  crossorigin="anonymous">  
+			</script>
 			<!--JQUERY CORE-->
 
 		</head>
@@ -18,7 +19,10 @@
 				padding: 20px;
 				}
 		</style>
+
 <body>
+
+<a href="../profile/profile.php" style="margin-left: 800px;" class="btn btn-primary">Profile</a>
 
 <form action="product_insert_data.php" method="POST" enctype="multipart/form-data" name="item_form">
 	<table border="0" align="center">
@@ -104,8 +108,7 @@
 		});
 
 	});
-			</script>
-				<a href="" id="test">TEST</a>
+</script>
 
 </body>
 </html>
