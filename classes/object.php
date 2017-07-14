@@ -35,7 +35,9 @@ class Object {
 		$properties= array();
 
 		foreach ($prop as $key => $value) {
-			$properties[]="{$key}='{$value}'";
+			if (isset($value)) {
+				$properties[]="{$key}='{$value}'";
+			}
 		}
 
 	//LAST_NAME, ADDRESS, STATE, PHONE_NUMBER ARE DELETED
