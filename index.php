@@ -121,3 +121,17 @@ require_once('classes/session.php');
 
 </body>
 </html>
+
+ cd beerrunners
+  436  ls
+  437  git push
+  438  git branch
+  439  git push -f
+  440  git push -u origin master
+  441  git init
+  442  git add .
+  443  git commit
+  444  git commit -m "First commit"
+  445  git remote add origin https://github.com/htorres6/beerrunners.git
+  446  git push -u origin master
+  447  www
