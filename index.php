@@ -2,8 +2,8 @@
 require_once('classes/session.php');
 
   // $pictures = array('stone.png', 'lagunitas.png', 
-  //                   'samuel_adams.png', 'sierra_nevada.png', 
-  //                   'victoria.jpg', 'avatar.png', 'bender.jpg');
+  //                    'samuel_adams.png', 'sierra_nevada.png', 
+  //                    'victoria.jpg', 'avatar.png', 'bender.jpg');
   // shuffle($pictures);
 ?>
 
@@ -64,8 +64,8 @@ require_once('classes/session.php');
         </div>
         <!--BUTTONS IN ACTION-->
 
-          <h1><center>WELCOME! To Beer Nation</center></h1>
-          <br /><br />
+          <h1><center>Beerrunners</center></h1>
+          <br>
        
 
 <form action="" method="post">
@@ -73,23 +73,26 @@ require_once('classes/session.php');
   <table border="3" align="center">
     <tr style="background-color: #cccccc;">
       <td style="padding: 15px; padding-left: 55px; padding-right: 55px;">
-        <strong>Electronics</strong>
+        <strong>IPA's</strong>
       </td>
       <td style="padding-left: 55px; padding-right: 55px;">
-        <strong>Home Appliance</strong>
+        <strong>ALE's</strong>
       </td>
       <td style="padding-left: 55px; padding-right: 55px;">
-        <strong>Party Supplies</strong>
+        <strong>STOUT's</strong>
       </td>
       <td style="padding-left: 55px; padding-right: 55px;">
-        <strong>Tools</strong>
+        <strong>PORTER's</strong>
+      </td>
+      <td style="padding-left: 55px; padding-right: 55px;">
+        <strong>LAGER's</strong>
       </td>
     </tr>
 
 
   </table>
 
-
+  <br><br>
 
 
 
@@ -116,22 +119,8 @@ require_once('classes/session.php');
                   ?>
                 </tr>
               </table>
-            </div> -->
-
+            </div>
+ -->
 
 </body>
 </html>
-
- cd beerrunners
-  436  ls
-  437  git push
-  438  git branch
-  439  git push -f
-  440  git push -u origin master
-  441  git init
-  442  git add .
-  443  git commit
-  444  git commit -m "First commit"
-  445  git remote add origin https://github.com/htorres6/beerrunners.git
-  446  git push -u origin master
-  447  www

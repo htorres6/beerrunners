@@ -61,8 +61,10 @@
                 
                 <br><br>
 
+                <div style="color: red;" id="error_message"></div>
+
                 <label style="color: green;"">Username..</label><br>
-                <input type="text" style="background-color: #dbdbdb ;" placeholder="Username" name="user_name" required>
+                <input type="text" style="background-color: #dbdbdb ;" placeholder="Username" id="username" name="user_name" required>
 
                 <br>
 
@@ -80,6 +82,34 @@
         </div>
     </div>    
             
+<script>
+    $(function(){
+        var username= $('#username');
+        var error= $('#error_message');
+
+        username.blur(function(){
+            var send_data= $(this).val();
+            $.ajax({
+                url: 'username_process_data_ajax.php',
+                method: 'POST',
+                data: {betos_key:send_data},
+                success: function(data){
+                    if (data=='') {
+                         error.delay(5000).fadeOut('slow');
+                    } else{
+                        error.html(data);
+                        username.focus();
+                    }
+                    
+
+                }
+
+            });
+        });
+    });
+</script>
+
+
     <div class="container">
         <div class="row" align="center">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">         

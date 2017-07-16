@@ -1,7 +1,6 @@
  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#"><b>Products</b></a>
-  <a href="#"><b>Services</b></a>
+  <a href="#"><b>All Producst</b></a>
   <a href="#"><b>Rewards</b></a>
   <a href="#"><b>Contact</b></a>
 </div>
