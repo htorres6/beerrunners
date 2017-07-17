@@ -65,7 +65,9 @@ class Object {
 	}
 
 
-
+//obstraction 
+	//create protected static functions 
+		//
 
 
 }//END OF CLASS

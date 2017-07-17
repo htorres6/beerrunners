@@ -1,51 +1,45 @@
 <?php 
 require_once("../classes/ini.php");
 
-$file= $_FILES['user_photo'];
-$directory= __DIR__ . "/user_photos/";
-$size= $file['size'];
-$temp= $file['tmp_name'];
-$name= $file['name'];
-$target= $directory. $name;
+$photo= new Photo();
+
 $current= $_POST['current_photo'];
 
-
-unlink("user_photos/".$current);
-
 $id= $_SESSION['user_id'];
-$sql="UPDATE users SET photo_path='$name' WHERE id='$id'";
 
-$db->query($sql);
-
-//THIS MESSAGE WILL BE SET AFTER PHOTO HAS BEEN UPDATEDA
-Session::set_message("<p style='background-color: orange;'>PHOTO UPDATE COMPLETE::</p>");
-
-
-if ($size < 2000000) {
-	move_uploaded_file($temp, $target);
+if (!$photo->up_load_photo($_FILES['user_photo'], $current, $id)) {
+	Session::set_message("<p style='background-color: red;'>PHOTO UPLOAD FUNCTION FAILED</p>");
+	$db->redirect("../profile/profile.php");
+} else{
+	Session::set_message("<p style='background-color: green;'>PHOTO UPDATE COMPLETE</p>");
+	$db->redirect("../profile/profile.php");
 }
 
 
-$db->redirect("../profile/profile.php");
 
 
 
-// // echo $directory;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // var_dump($size);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // $user= new User();
 

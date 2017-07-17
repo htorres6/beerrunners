@@ -39,9 +39,11 @@ require_once('classes/session.php');
 
 </head>
 <body>
-<!--NAVIGATION DROP DOWN-->
+<!--MENU BAR-->
 <?php include("includes/nav_bar.php"); ?>
-<!--NAVIGATION DROP DOWN-->
+<!--MENU BAR-->
+
+
 
         <?php  Session::display_message(); ?>
   
@@ -63,48 +65,18 @@ require_once('classes/session.php');
           </div>
         </div>
         <!--BUTTONS IN ACTION-->
+        <br>
 
-          <h1><center>Beerrunners</center></h1>
-          <br>
-       
+        <div class="container">
+          <div style="font-size: 25px" align="center">
+              <div style="background-color: #cccccc" align="center">PRODUCTS 
+              </div>
+          </div>
+        </div>
 
-<form action="" method="post">
-  
-  <table border="3" align="center">
-    <tr style="background-color: #cccccc;">
-      <td style="padding: 15px; padding-left: 55px; padding-right: 55px;">
-        <strong>IPA's</strong>
-      </td>
-      <td style="padding-left: 55px; padding-right: 55px;">
-        <strong>ALE's</strong>
-      </td>
-      <td style="padding-left: 55px; padding-right: 55px;">
-        <strong>STOUT's</strong>
-      </td>
-      <td style="padding-left: 55px; padding-right: 55px;">
-        <strong>PORTER's</strong>
-      </td>
-      <td style="padding-left: 55px; padding-right: 55px;">
-        <strong>LAGER's</strong>
-      </td>
-    </tr>
-
-
-  </table>
-
-  <br><br>
-
-
-
-
-
-</form>
-
-
-
-
-
-
+<!--DROP DOWN NAV BAR-->
+<?php include("includes/nav_dropdown.php"); ?>
+<!--DROP DOWN NAV BAR-->
 
             <!-- <div align="center">
               <table style="width: 100%; border: 0;">
@@ -120,7 +92,7 @@ require_once('classes/session.php');
                 </tr>
               </table>
             </div>
- -->
+            --> 
 
 </body>
 </html>

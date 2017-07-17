@@ -15,6 +15,10 @@
     </script>
     <!--JQUERY CORE**-->
 
+    <!--JS-->
+        <script src="../js/signup_form_validation.js"></script>
+    <!--JS-->
+
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <style>
@@ -32,7 +36,7 @@
             <h2><center><b>Sign Up</b></center></h2>
 
 <!--SIGN-UP FORM STARTS**-->
-<form action="signup_page_data.php" method="POST" >
+<form action="signup_page_data.php" method="POST" id="signup_form">
     <div class="container">
         <div class="row" align="center">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -56,64 +60,42 @@
 
                 <br><br>
 
-                <label style="color: green;">E-mail..</label><br>
-                <input type="text" style="background-color: #dbdbdb ;" placeholder="E-mail" name="email" required>
-                
-                <br><br>
-
                 <div style="color: red;" id="error_message"></div>
 
-                <label style="color: green;"">Username..</label><br>
+
+                <label style="color: green;">E-mail..</label><br>
+                <input type="text" style="background-color: #dbdbdb ;" placeholder="E-mail" name="email" id="email" required>
+                
+                <br>
+
+                <label style="color: green;">Username..</label><br>
                 <input type="text" style="background-color: #dbdbdb ;" placeholder="Username" id="username" name="user_name" required>
 
                 <br>
 
+
                 <label style="color: green;">Enter Password..</label><br>
-                <input type="password" style="background-color: #dbdbdb ;" placeholder="Password" name="password" required>
+                <input type="password" style="background-color: #dbdbdb ;" id="password" placeholder="Password" name="password" required>
 
-                <br><br>
+                <br>
 
-                <label style="color: green;"">Address..</label><br>
-                <input type="text" style="background-color: #dbdbdb ;" placeholder="Address" name="address" required>
+                <div style="color: red;" id="password_error"></div>
+
+                <label style="color: green;">Confirm Password..</label><br>
+                <input type="password" style="background-color: #dbdbdb ;" placeholder="confirm_password" id="confirm_password" required>
 
                 <br><br>
 
             </div>
         </div>
     </div>    
-            
-<script>
-    $(function(){
-        var username= $('#username');
-        var error= $('#error_message');
-
-        username.blur(function(){
-            var send_data= $(this).val();
-            $.ajax({
-                url: 'username_process_data_ajax.php',
-                method: 'POST',
-                data: {betos_key:send_data},
-                success: function(data){
-                    if (data=='') {
-                         error.delay(5000).fadeOut('slow');
-                    } else{
-                        error.html(data);
-                        username.focus();
-                    }
-                    
-
-                }
-
-            });
-        });
-    });
-</script>
+          
 
 
     <div class="container">
         <div class="row" align="center">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">         
-                </a><button style="color: blue;" type="submit" name="submit">Create account</button><br>
+                </a><input style="color: blue;" type="submit" id="submit_button" name="submit" value="Create account"><br>
 
                 <span class="psw" style="background-color: orange;"><b>Already have an account ?</b></span>  <a href="../login/login_page.php">Log-In</a>
             </div>
@@ -121,6 +103,8 @@
     </div>
 </form>
 <!--END OF FORM-->
+
+
 
 </body>
 </html>
