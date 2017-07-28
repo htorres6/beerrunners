@@ -2,38 +2,34 @@
 
 class Photo{
 
-
-	public $temp_name;
-	public $type;
+	public $file;
 	public $size;
-	public $name;
-	public $directory= "user_photos/";
+	public $photo_path;
+	public $user_id;
+
 
 
 	public function up_load_photo($file, $current_photo, $id){
 		global $db;
 
 		$temp_name= $file['tmp_name'];
-		$size= $file['size'];
 		$name= $file['name'];
-		$target= "user_photos/".$name;
+		$target= $this->photo_path;
 
-		if (file_exists($this->directory.$current_photo)){
-			if (!unlink($this->directory.$current_photo)) {
-				return false;
-			}
+		if (file_exists($current_photo)){
+			unlink($current_photo);
+			$sql2="DELETE FROM photos WHERE user_id='$id'";
+			$db->query($sql2);
 		}
 
-		if (!move_uploaded_file($temp_name, $target)){
-			return false;
-			//echo $db->conn->error;
+		if (move_uploaded_file($temp_name, $target)){
+			$sql="INSERT INTO photos(file, size, photo_path, user_id) VALUES('$name', '$this->size', '$this->photo_path', '$id')";
+
+			$db->query($sql);
+			return true;
 		}
 
-		$sql="UPDATE users SET photo_path='$name' WHERE id='$id'";
-		if (!$db->query($sql)) {
-			return false;
-		}
-	
+
 	}
 
 

@@ -8,8 +8,7 @@ $(function(){
     var email= $('#email');
 
 
-    function validatecommSeptEmail(commSeptEmail)
-    {
+    function validatecommSeptEmail(commSeptEmail){
         var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
         return (regex.test(commSeptEmail)) ? true : false;
     }
@@ -30,10 +29,7 @@ $(function(){
                 if (error.text()) {
                     username.focus();
                 }
-                
-
             }
-
         });
     });
 

@@ -64,7 +64,11 @@ require_once('../classes/ini.php');
   <div class="container" align="#center" style="background-color:B06666">
     <div class="row" align="center">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        
+        <!--INVALID CREDENTIALS MSG-->
         <?php Session::display_message(); ?><br>
+        <!--INVALID CREDENTIALS MSG-->
+        
         <label style="color: green;">USER NAME..</label><br>
         <input class="#form-control" style="background-color: #dbdbdb" placeholder="Enter Username" type="text" name="username" required>
         <br><br>

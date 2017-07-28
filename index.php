@@ -21,7 +21,9 @@ require_once('classes/session.php');
 <!--JQUERY CORE-->
 
 <!--JS-->
-<script type="text/javascript" src="js/navbar_functionality.js"></script>
+<script src="js/navbar_functionality.js"></script>
+<!-- <script src="js/navbar_dropdown_functionality.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
 <!--JS-->
 
 <!--CSS-->

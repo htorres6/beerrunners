@@ -14,7 +14,7 @@ class Object {
 
 		//COMMUNICATE WITH THE DATABASE using the query
 		$fp=$db->query($sql);
-		//TESTING IF THIS PRODUCT INSTER FUNCTUALITY
+		//TESTING IF THIS PRODUCT INSERT FUNCTUALITY
 		if (!$fp) {
 			die("IDGAF!!.." . $db->conn->error);
 		}

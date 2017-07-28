@@ -4,7 +4,6 @@
 $user= new User();
 //object   //object properties //values
 $user->user_name= $db->escape_string($_POST['username']);
-
 $user->password= md5($db->escape_string($_POST['psw']), $user->user_name);
 
 

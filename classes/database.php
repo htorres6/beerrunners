@@ -22,9 +22,6 @@ class Database{
 
 
 
-
-   
-
 	public function query($sql){
 		$result= $this->conn->query($sql);			
 					
@@ -33,9 +30,6 @@ class Database{
 			}
 			return $result;					
 	}
-
-
-
 
 
 
@@ -48,9 +42,7 @@ class Database{
     	header('Location: '. $location);
     }
 
-
-
-    public function auto_id() {
+    public function auto_id(){
     	return mysqli_insert_id($this->conn);
     }
 

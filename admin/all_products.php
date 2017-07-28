@@ -57,6 +57,22 @@ $result= $db->query($sql);
 <?php } ?>
 </table>
 
+<?php 
+$beto= new stdClass();
+
+$beto->smile=3;
+
+echo $beto->smile;
+
+$smile= "laugh";
+
+
+
+
+
+
+?>
+
 <script src="../bootstrap/js/bootstrap.js"></script>
 
 </body>

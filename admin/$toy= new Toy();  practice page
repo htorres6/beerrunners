@@ -1,0 +1,22 @@
+$toy= new Toy();
+
+$toy->face=8;
+
+//properties and method can be use
+
+//object->method
+$toy->run();
+
+
+if($toy->color='red'){
+	echo "color"
+}
+
+
+$toy->color='red';
+
+//you cannot echo out a methods
+echo $toy->color;
+
+
+$toy->play= $_POST['ball'];

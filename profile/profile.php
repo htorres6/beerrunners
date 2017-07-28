@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <title>User Profile</title>
+      <title>Profile</title>
 
     <!--JQUERY CORE-->
     <script
@@ -48,8 +48,15 @@
         $lname= $row->last_name;
         $email= $row->email;
         $uname= $row->user_name;
-        $photo= $row->photo_path;
   }
+
+  $sql2="SELECT photo_path FROM photos WHERE user_id='$id'";
+  $result2= $db->query($sql2);
+if ($row2= $result2->fetch_object()) {
+    $photo= $row2->photo_path;
+}
+
+
 
 ?>
 
@@ -94,11 +101,11 @@
 <div class="container">
   <div class="row" align="center">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <a href="../index.php"><img src="../update/user_photos/<?php echo $photo;?>" width="100" height="100" class="img-circle"></a><br>
+      <a href="../index.php"><img src="../update/<?php echo $photo;?>" width="100" height="100" class="img-circle"></a><br>
 
-<!--LOGIN DATA MESSAGE-->
+<!--WELCOME BACK "user" MSG-->
 <?php Session::display_message(); ?>
-<!--LOGIN DATA MESSAGE-->
+<!--WELCOME BACK "user" MSG-->
       
       <br>
       <input type="file" name="user_photo" id="photo">
@@ -134,6 +141,7 @@
   </div>
 </div>
 </form>
+
 <!--END OF ACCOUNT MANAGE FORM-->
 
 

@@ -59,12 +59,10 @@
               </span>
 
                 <br><br>
-
                 <div style="color: red;" id="error_message"></div>
 
-
                 <label style="color: green;">E-mail..</label><br>
-                <input type="text" style="background-color: #dbdbdb ;" placeholder="E-mail" name="email" id="email" required>
+                <input type="text" style="background-color: #dbdbdb ;" placeholder="E-mail" id="email" name="email" required>
                 
                 <br>
 
@@ -73,12 +71,10 @@
 
                 <br>
 
-
                 <label style="color: green;">Enter Password..</label><br>
                 <input type="password" style="background-color: #dbdbdb ;" id="password" placeholder="Password" name="password" required>
 
                 <br>
-
                 <div style="color: red;" id="password_error"></div>
 
                 <label style="color: green;">Confirm Password..</label><br>
@@ -95,7 +91,7 @@
     <div class="container">
         <div class="row" align="center">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">         
-                </a><input style="color: blue;" type="submit" id="submit_button" name="submit" value="Create account"><br>
+                <input style="color: blue;" type="submit" id="submit_button" name="submit" value="Create account"><br>
 
                 <span class="psw" style="background-color: orange;"><b>Already have an account ?</b></span>  <a href="../login/login_page.php">Log-In</a>
             </div>
